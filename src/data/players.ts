@@ -24,8 +24,8 @@ export interface Player {
 export const players: Player[] = [
   // Starting Lineup (1-2-2-2)
   { 
-    id: 1, name: "Kaleci", position: "Kaleci", role: 'GK', number: 1, isStarting: true, coordinates: { x: 50, y: 90 },
-    age: 25, from: "İstanbul", stats: { speed: 70, shooting: 40, passing: 65, dribbling: 50, physical: 85 }
+    id: 1, name: "Süleyman Emir Seçkin", nickname: "Sülo", position: "Kaleci", role: 'GK', photo: "./sülo.png", number: 1, isStarting: true, coordinates: { x: 50, y: 90 },
+    age: 19, from: "Denizli", stats: { speed: 75, shooting: 50, passing: 68, dribbling: 64, physical: 80 }
   },
   { 
     id: 2, name: "Defans 1", position: "Sol Bek", role: 'DF', number: 3, isStarting: true, coordinates: { x: 30, y: 70 },
