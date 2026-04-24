@@ -59,7 +59,7 @@ const PlayerCard = ({ player, onPitch = false, onClick, isOverlay = false }: Pla
         <div className="player-number">{player.number}</div>
       </div>
       <div className="player-info">
-        <div className="player-name">{player.name}</div>
+        <div className="player-name">{player.nickname || player.name}</div>
         <div className="player-pos">{player.position}</div>
       </div>
     </div>
