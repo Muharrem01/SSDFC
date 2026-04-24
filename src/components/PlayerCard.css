@@ -1,0 +1,103 @@
+.player-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.player-card.on-pitch {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.player-card.on-pitch:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  z-index: 10;
+}
+
+.player-card.in-sidebar {
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  padding: 10px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.player-card.in-sidebar:hover {
+  background: #252525;
+}
+
+.player-image-container {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.on-pitch .player-image-container {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  padding: 2px;
+  background: var(--bg-dark);
+}
+
+.player-image, .player-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.player-placeholder {
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.player-number {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: var(--primary-color);
+  color: black;
+  font-size: 0.7rem;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg-dark);
+}
+
+.player-info {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.in-sidebar .player-info {
+  text-align: left;
+}
+
+.player-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+.player-pos {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}

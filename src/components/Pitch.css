@@ -1,0 +1,96 @@
+.pitch-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+.pitch {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 2 / 3;
+  background-color: var(--pitch-color);
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 40px,
+      transparent 40px,
+      transparent 80px
+    );
+  border: 5px solid var(--pitch-line);
+  border-radius: 5px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  /* transform: rotateX(20deg); */
+}
+
+.pitch-outline {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+}
+
+.midline {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--pitch-line);
+}
+
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--pitch-line);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.penalty-area {
+  position: absolute;
+  left: 50%;
+  width: 60%;
+  height: 15%;
+  border: 2px solid var(--pitch-line);
+  transform: translateX(-50%);
+}
+
+.penalty-area.top {
+  top: 0;
+  border-top: none;
+}
+
+.penalty-area.bottom {
+  bottom: 0;
+  border-bottom: none;
+}
+
+.goal {
+  position: absolute;
+  left: 50%;
+  width: 30%;
+  height: 5px;
+  background: white;
+  transform: translateX(-50%);
+}
+
+.goal.top {
+  top: -5px;
+}
+
+.goal.bottom {
+  bottom: -5px;
+}
+
+@media (max-width: 768px) {
+  .pitch {
+    max-width: 90vw;
+  }
+}

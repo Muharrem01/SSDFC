@@ -1,0 +1,58 @@
+.sidebar {
+  width: 300px;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-right: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.sidebar-header h2 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--text-main);
+}
+
+.substitutes-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.team-info {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.team-info h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.team-info p {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+}

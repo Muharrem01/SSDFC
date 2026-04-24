@@ -1,0 +1,27 @@
+:root {
+  --primary-color: #00ff41; /* Football pitch green / Matrix green */
+  --bg-dark: #0a0a0a;
+  --bg-card: #1a1a1a;
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --pitch-color: #1b4d3e;
+  --pitch-line: rgba(255, 255, 255, 0.5);
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
