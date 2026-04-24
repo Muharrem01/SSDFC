@@ -4,13 +4,15 @@ import './PlayerCard.css';
 interface PlayerCardProps {
   player: Player;
   onPitch?: boolean;
+  onClick?: (player: Player) => void;
 }
 
-const PlayerCard = ({ player, onPitch = false }: PlayerCardProps) => {
+const PlayerCard = ({ player, onPitch = false, onClick }: PlayerCardProps) => {
   return (
     <div 
       className={`player-card ${onPitch ? 'on-pitch' : 'in-sidebar'}`}
       style={onPitch ? { left: `${player.coordinates.x}%`, top: `${player.coordinates.y}%` } : {}}
+      onClick={() => onClick?.(player)}
     >
       <div className="player-image-container">
         {player.photo ? (

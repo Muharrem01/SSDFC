@@ -1,9 +1,14 @@
 import { players } from '../data/players';
+import type { Player } from '../data/players';
 import PlayerCard from './PlayerCard';
 import './Sidebar.css';
 import { Users } from 'lucide-react';
 
-const Sidebar = () => {
+interface SidebarProps {
+  onPlayerClick: (player: Player) => void;
+}
+
+const Sidebar = ({ onPlayerClick }: SidebarProps) => {
   const substitutes = players.filter(p => !p.isStarting);
 
   return (
@@ -14,7 +19,7 @@ const Sidebar = () => {
       </div>
       <div className="substitutes-list">
         {substitutes.map(player => (
-          <PlayerCard key={player.id} player={player} />
+          <PlayerCard key={player.id} player={player} onClick={onPlayerClick} />
         ))}
       </div>
       <div className="team-info">

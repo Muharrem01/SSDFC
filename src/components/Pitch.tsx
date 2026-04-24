@@ -1,8 +1,13 @@
 import { players } from '../data/players';
+import type { Player } from '../data/players';
 import PlayerCard from './PlayerCard';
 import './Pitch.css';
 
-const Pitch = () => {
+interface PitchProps {
+  onPlayerClick: (player: Player) => void;
+}
+
+const Pitch = ({ onPlayerClick }: PitchProps) => {
   const startingPlayers = players.filter(p => p.isStarting);
 
   return (
@@ -19,7 +24,7 @@ const Pitch = () => {
         
         {/* Players */}
         {startingPlayers.map(player => (
-          <PlayerCard key={player.id} player={player} onPitch={true} />
+          <PlayerCard key={player.id} player={player} onPitch={true} onClick={onPlayerClick} />
         ))}
       </div>
     </div>

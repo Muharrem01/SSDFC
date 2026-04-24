@@ -1,3 +1,11 @@
+export interface PlayerStats {
+  speed: number;
+  shooting: number;
+  passing: number;
+  dribbling: number;
+  physical: number;
+}
+
 export interface Player {
   id: number;
   name: string;
@@ -6,23 +14,50 @@ export interface Player {
   photo?: string;
   number: number;
   isStarting: boolean;
-  coordinates: { x: number; y: number }; // Percentage for positioning on pitch
+  coordinates: { x: number; y: number };
+  age: number;
+  from: string;
+  stats: PlayerStats;
 }
 
 export const players: Player[] = [
   // Starting Lineup (1-2-2-2)
-  { id: 1, name: "Kaleci", position: "Kaleci", role: 'GK', number: 1, isStarting: true, coordinates: { x: 50, y: 90 } },
-  
-  { id: 2, name: "Defans 1", position: "Sol Bek", role: 'DF', number: 3, isStarting: true, coordinates: { x: 30, y: 70 } },
-  { id: 3, name: "Defans 2", position: "Sağ Bek", role: 'DF', number: 4, isStarting: true, coordinates: { x: 70, y: 70 } },
-  
-  { id: 4, name: "Orta Saha 1", position: "Sol Orta Saha", role: 'MF', number: 8, isStarting: true, coordinates: { x: 30, y: 45 } },
-  { id: 5, name: "Orta Saha 2", position: "Sağ Orta Saha", role: 'MF', number: 10, isStarting: true, coordinates: { x: 70, y: 45 } },
-  
-  { id: 6, name: "Forvet 1", position: "Sol Forvet", role: 'FW', number: 7, isStarting: true, coordinates: { x: 35, y: 20 } },
-  { id: 7, name: "Forvet 2", position: "Sağ Forvet", role: 'FW', number: 9, isStarting: true, coordinates: { x: 65, y: 20 } },
+  { 
+    id: 1, name: "Kaleci", position: "Kaleci", role: 'GK', number: 1, isStarting: true, coordinates: { x: 50, y: 90 },
+    age: 25, from: "İstanbul", stats: { speed: 70, shooting: 40, passing: 65, dribbling: 50, physical: 85 }
+  },
+  { 
+    id: 2, name: "Defans 1", position: "Sol Bek", role: 'DF', number: 3, isStarting: true, coordinates: { x: 30, y: 70 },
+    age: 24, from: "Ankara", stats: { speed: 82, shooting: 55, passing: 70, dribbling: 68, physical: 80 }
+  },
+  { 
+    id: 3, name: "Defans 2", position: "Sağ Bek", role: 'DF', number: 4, isStarting: true, coordinates: { x: 70, y: 70 },
+    age: 26, from: "İzmir", stats: { speed: 78, shooting: 50, passing: 72, dribbling: 65, physical: 88 }
+  },
+  { 
+    id: 4, name: "Orta Saha 1", position: "Sol Orta Saha", role: 'MF', number: 8, isStarting: true, coordinates: { x: 30, y: 45 },
+    age: 23, from: "Bursa", stats: { speed: 85, shooting: 75, passing: 88, dribbling: 84, physical: 72 }
+  },
+  { 
+    id: 5, name: "Orta Saha 2", position: "Sağ Orta Saha", role: 'MF', number: 10, isStarting: true, coordinates: { x: 70, y: 45 },
+    age: 27, from: "Adana", stats: { speed: 80, shooting: 78, passing: 90, dribbling: 88, physical: 75 }
+  },
+  { 
+    id: 6, name: "Forvet 1", position: "Sol Forvet", role: 'FW', number: 7, isStarting: true, coordinates: { x: 35, y: 20 },
+    age: 22, from: "Antalya", stats: { speed: 92, shooting: 85, passing: 75, dribbling: 82, physical: 70 }
+  },
+  { 
+    id: 7, name: "Forvet 2", position: "Sağ Forvet", role: 'FW', number: 9, isStarting: true, coordinates: { x: 65, y: 20 },
+    age: 25, from: "Trabzon", stats: { speed: 88, shooting: 92, passing: 70, dribbling: 78, physical: 82 }
+  },
 
   // Substitutes
-  { id: 8, name: "Yedek 1", position: "Yedek", role: 'SUB', number: 12, isStarting: false, coordinates: { x: 0, y: 0 } },
-  { id: 9, name: "Yedek 2", position: "Yedek", role: 'SUB', number: 13, isStarting: false, coordinates: { x: 0, y: 0 } },
+  { 
+    id: 8, name: "Yedek 1", position: "Yedek", role: 'SUB', number: 12, isStarting: false, coordinates: { x: 0, y: 0 },
+    age: 21, from: "Samsun", stats: { speed: 84, shooting: 70, passing: 75, dribbling: 76, physical: 74 }
+  },
+  { 
+    id: 9, name: "Yedek 2", position: "Yedek", role: 'SUB', number: 13, isStarting: false, coordinates: { x: 0, y: 0 },
+    age: 24, from: "Eskişehir", stats: { speed: 75, shooting: 65, passing: 80, dribbling: 72, physical: 80 }
+  },
 ];
