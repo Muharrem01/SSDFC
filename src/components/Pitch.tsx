@@ -1,13 +1,13 @@
-import { players } from '../data/players';
 import type { Player } from '../data/players';
 import PlayerCard from './PlayerCard';
 import './Pitch.css';
 
 interface PitchProps {
+  players: Player[];
   onPlayerClick: (player: Player) => void;
 }
 
-const Pitch = ({ onPlayerClick }: PitchProps) => {
+const Pitch = ({ players, onPlayerClick }: PitchProps) => {
   const startingPlayers = players.filter(p => p.isStarting);
 
   return (

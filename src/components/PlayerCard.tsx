@@ -1,3 +1,4 @@
+import { useDraggable, useDroppable } from '@dnd-kit/core';
 import type { Player } from '../data/players';
 import './PlayerCard.css';
 
@@ -5,14 +6,45 @@ interface PlayerCardProps {
   player: Player;
   onPitch?: boolean;
   onClick?: (player: Player) => void;
+  isOverlay?: boolean;
 }
 
-const PlayerCard = ({ player, onPitch = false, onClick }: PlayerCardProps) => {
+const PlayerCard = ({ player, onPitch = false, onClick, isOverlay = false }: PlayerCardProps) => {
+  const { attributes, listeners, setNodeRef, transform, isDragging } = useDraggable({
+    id: player.id,
+  });
+
+  const { setNodeRef: setDropRef } = useDroppable({
+    id: player.id,
+  });
+
+  const style = transform ? {
+    transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
+    opacity: isDragging ? 0 : 1,
+  } : undefined;
+
+  const positionStyle = onPitch ? { 
+    left: `${player.coordinates.x}%`, 
+    top: `${player.coordinates.y}%` 
+  } : {};
+
   return (
     <div 
-      className={`player-card ${onPitch ? 'on-pitch' : 'in-sidebar'}`}
-      style={onPitch ? { left: `${player.coordinates.x}%`, top: `${player.coordinates.y}%` } : {}}
-      onClick={() => onClick?.(player)}
+      ref={(node) => {
+        setNodeRef(node);
+        setDropRef(node);
+      }}
+      className={`player-card ${onPitch ? 'on-pitch' : 'in-sidebar'} ${isDragging ? 'dragging' : ''} ${isOverlay ? 'overlay' : ''}`}
+      style={{ ...positionStyle, ...style }}
+      {...attributes}
+      {...listeners}
+      onClick={() => {
+        // Prevent click when dragging ends
+        if (transform && (Math.abs(transform.x) > 5 || Math.abs(transform.y) > 5)) {
+          return;
+        }
+        onClick?.(player);
+      }}
     >
       <div className="player-image-container">
         {player.photo ? (

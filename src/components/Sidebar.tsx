@@ -1,14 +1,14 @@
-import { players } from '../data/players';
 import type { Player } from '../data/players';
 import PlayerCard from './PlayerCard';
 import './Sidebar.css';
 import { Users } from 'lucide-react';
 
 interface SidebarProps {
+  players: Player[];
   onPlayerClick: (player: Player) => void;
 }
 
-const Sidebar = ({ onPlayerClick }: SidebarProps) => {
+const Sidebar = ({ players, onPlayerClick }: SidebarProps) => {
   const substitutes = players.filter(p => !p.isStarting);
 
   return (
