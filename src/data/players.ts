@@ -48,8 +48,8 @@ export const players: Player[] = [
     age: 20, from: "Denizli", stats: { speed: 60, shooting: 80, passing: 74, dribbling: 80, physical: 75 }
   },
   { 
-    id: 7, name: "Forvet 2", position: "Sağ Forvet", role: 'FW', number: 9, isStarting: true, coordinates: { x: 65, y: 20 },
-    age: 25, from: "Trabzon", stats: { speed: 88, shooting: 92, passing: 70, dribbling: 78, physical: 82 }
+    id: 7, name: "Mehmet Özkan", nickname: "Memo", position: "Sağ Forvet", role: 'FW', photo: "./memo.png", number: 9, isStarting: true, coordinates: { x: 65, y: 20 },
+    age: 19, from: "Denizli", stats: { speed: 84, shooting: 90, passing: 95, dribbling: 83, physical: 70 }
   },
 
   // Substitutes
