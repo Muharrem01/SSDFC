@@ -28,33 +28,33 @@ export const players: Player[] = [
     age: 19, from: "Denizli", stats: { speed: 75, shooting: 50, passing: 68, dribbling: 64, physical: 80 }
   },
   { 
-    id: 2, name: "Arda Çetin", nickname: "Arda", position: "Sol Bek", role: 'DF', photo: "./arda.png", number: 3, isStarting: true, coordinates: { x: 30, y: 70 },
+    id: 2, name: "Arda Çetin", nickname: "Arda", position: "Sol Bek", role: 'DF', photo: "./arda.png", number: 4, isStarting: true, coordinates: { x: 30, y: 70 },
     age: 20, from: "Denizli", stats: { speed: 58, shooting: 80, passing: 80, dribbling: 83, physical: 73 }
   },
   { 
-    id: 3, name: "Efe Ünsal", nickname: "Efe", position: "Sağ Bek", role: 'DF', photo: "./efe.png", number: 4, isStarting: true, coordinates: { x: 70, y: 70 },
+    id: 3, name: "Efe Ünsal", nickname: "Efe", position: "Sağ Bek", role: 'DF', photo: "./efe.png", number: 3, isStarting: true, coordinates: { x: 70, y: 70 },
     age: 19, from: "Denizli", stats: { speed: 80, shooting: 82, passing: 84, dribbling: 78, physical: 78 }
   },
   { 
-    id: 4, name: "Muharrem Kural", nickname: "Kural", position: "Sol Orta Saha", role: 'MF', number: 8, isStarting: true, coordinates: { x: 30, y: 45 },
+    id: 4, name: "Muharrem Kural", nickname: "Kural", position: "Sol Orta Saha", role: 'MF', number: 5, isStarting: true, coordinates: { x: 30, y: 45 },
     photo: "./kural.png", age: 19, from: "Burdur", stats: { speed: 82, shooting: 88, passing: 96, dribbling: 90, physical: 85 }
   },
   { 
-    id: 5, name: "Ertuğrul Enes Vural", nickname: "Eto", position: "Sağ Orta Saha", role: 'MF', photo: "./eto.png", number: 10, isStarting: true, coordinates: { x: 70, y: 45 },
+    id: 5, name: "Ertuğrul Enes Vural", nickname: "Eto", position: "Sağ Orta Saha", role: 'MF', photo: "./eto.png", number: 8, isStarting: true, coordinates: { x: 70, y: 45 },
     age: 20, from: "Denizli", stats: { speed: 75, shooting: 84, passing: 80, dribbling: 84, physical: 82 }
   },
   { 
-    id: 6, name: "Kürşat Emre Külköylüoğlu", nickname: "Küşo", position: "Sol Forvet", role: 'FW', photo: "./Küşo.png", number: 7, isStarting: true, coordinates: { x: 35, y: 20 },
+    id: 6, name: "Kürşat Emre Külköylüoğlu", nickname: "Küşo", position: "Sol Forvet", role: 'FW', photo: "./Küşo.png", number: 9, isStarting: true, coordinates: { x: 35, y: 20 },
     age: 20, from: "Denizli", stats: { speed: 60, shooting: 80, passing: 74, dribbling: 80, physical: 75 }
   },
   { 
-    id: 7, name: "Mehmet Özkan", nickname: "Memo", position: "Sağ Forvet", role: 'FW', photo: "./memo.png", number: 9, isStarting: true, coordinates: { x: 65, y: 20 },
+    id: 7, name: "Mehmet Özkan", nickname: "Memo", position: "Sağ Forvet", role: 'FW', photo: "./memo.png", number: 10, isStarting: true, coordinates: { x: 65, y: 20 },
     age: 19, from: "Denizli", stats: { speed: 84, shooting: 90, passing: 95, dribbling: 83, physical: 70 }
   },
 
   // Substitutes
   { 
-    id: 8, name: "Berkay Sözgen", nickname: "Beko", position: "Yedek", role: 'SUB', photo: "./beko.png", number: 12, isStarting: false, coordinates: { x: 0, y: 0 },
+    id: 8, name: "Berkay Sözgen", nickname: "Beko", position: "Yedek", role: 'SUB', photo: "./beko.png", number: 6, isStarting: false, coordinates: { x: 0, y: 0 },
     age: 20, from: "Denizli", stats: { speed: 63, shooting: 76, passing: 78, dribbling: 80, physical: 75 }
   },
   { 
