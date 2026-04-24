@@ -28,8 +28,8 @@ export const players: Player[] = [
     age: 19, from: "Denizli", stats: { speed: 75, shooting: 50, passing: 68, dribbling: 64, physical: 80 }
   },
   { 
-    id: 2, name: "Defans 1", position: "Sol Bek", role: 'DF', number: 3, isStarting: true, coordinates: { x: 30, y: 70 },
-    age: 24, from: "Ankara", stats: { speed: 82, shooting: 55, passing: 70, dribbling: 68, physical: 80 }
+    id: 2, name: "Arda Çetin", nickname: "Arda", position: "Sol Bek", role: 'DF', photo: "./arda.png", number: 3, isStarting: true, coordinates: { x: 30, y: 70 },
+    age: 20, from: "Denizli", stats: { speed: 58, shooting: 80, passing: 80, dribbling: 83, physical: 73 }
   },
   { 
     id: 3, name: "Defans 2", position: "Sağ Bek", role: 'DF', number: 4, isStarting: true, coordinates: { x: 70, y: 70 },
