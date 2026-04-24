@@ -21,7 +21,10 @@ function App() {
       <Sidebar onPlayerClick={handlePlayerClick} />
       <main className="main-content">
         <header className="app-header">
-          <h1>SSD FC TAKIM KADROSU</h1>
+          <div className="logo-container">
+            <img src="./logo.svg" alt="SSD Logo" className="app-logo" />
+            <h1>SSD</h1>
+          </div>
           <div className="formation-badge">1-2-2-2</div>
         </header>
         <Pitch onPlayerClick={handlePlayerClick} />
