@@ -20,7 +20,7 @@ const PlayerCard = ({ player, onPitch = false, onClick, isOverlay = false }: Pla
 
   const style = transform ? {
     transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-    opacity: isDragging ? 0 : 1,
+    opacity: isDragging ? 0.4 : 1,
   } : undefined;
 
   const positionStyle = onPitch ? { 
