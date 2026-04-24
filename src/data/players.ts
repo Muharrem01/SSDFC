@@ -54,8 +54,8 @@ export const players: Player[] = [
 
   // Substitutes
   { 
-    id: 8, name: "Yedek 1", position: "Yedek", role: 'SUB', number: 12, isStarting: false, coordinates: { x: 0, y: 0 },
-    age: 21, from: "Samsun", stats: { speed: 84, shooting: 70, passing: 75, dribbling: 76, physical: 74 }
+    id: 8, name: "Berkay Sözgen", nickname: "Beko", position: "Yedek", role: 'SUB', photo: "./beko.png", number: 12, isStarting: false, coordinates: { x: 0, y: 0 },
+    age: 20, from: "Denizli", stats: { speed: 63, shooting: 76, passing: 78, dribbling: 80, physical: 75 }
   },
   { 
     id: 9, name: "Yedek 2", position: "Yedek", role: 'SUB', number: 13, isStarting: false, coordinates: { x: 0, y: 0 },
