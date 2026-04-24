@@ -20,12 +20,14 @@ import Pitch from './components/Pitch';
 import PlayerModal from './components/PlayerModal';
 import PlayerCard from './components/PlayerCard';
 import { players as initialPlayers, type Player } from './data/players';
+import { formations } from './data/formations';
 import './App.css';
 
 function App() {
   const [players, setPlayers] = useState<Player[]>(initialPlayers);
   const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null);
   const [activeId, setActiveId] = useState<number | null>(null);
+  const [currentFormation, setCurrentFormation] = useState<string>('2-2-2');
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -82,6 +84,30 @@ function App() {
     setActiveId(null);
   };
 
+  const toggleFormation = () => {
+    const formationKeys = Object.keys(formations);
+    const currentIndex = formationKeys.indexOf(currentFormation);
+    const nextIndex = (currentIndex + 1) % formationKeys.length;
+    const nextFormationKey = formationKeys[nextIndex];
+    const nextFormation = formations[nextFormationKey];
+
+    setCurrentFormation(nextFormationKey);
+
+    // Update coordinates for starting players
+    setPlayers(prevPlayers => {
+      const startingPlayers = prevPlayers.filter(p => p.isStarting);
+      const subs = prevPlayers.filter(p => !p.isStarting);
+      
+      // We assume starting players are mapped to formation positions in order
+      const updatedStarting = startingPlayers.map((p, index) => ({
+        ...p,
+        coordinates: nextFormation.positions[index] || p.coordinates
+      }));
+
+      return [...updatedStarting, ...subs];
+    });
+  };
+
   const activePlayer = activeId ? players.find(p => p.id === activeId) : null;
 
   return (
@@ -99,7 +125,9 @@ function App() {
               <img src="./logo.jpg" alt="SSD Logo" className="app-logo" />
               <h1>SSD</h1>
             </div>
-            <div className="formation-badge">1-2-2-2</div>
+            <div className="formation-badge" onClick={toggleFormation}>
+              {currentFormation}
+            </div>
           </header>
           <Pitch players={players} onPlayerClick={handlePlayerClick} />
         </main>

@@ -50,6 +50,19 @@
   font-weight: bold;
   font-size: 0.9rem;
   letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.formation-badge:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+}
+
+.formation-badge:active {
+  transform: scale(0.95);
 }
 
 @media (max-width: 768px) {
