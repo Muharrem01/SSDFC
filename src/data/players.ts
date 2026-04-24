@@ -44,8 +44,8 @@ export const players: Player[] = [
     age: 27, from: "Adana", stats: { speed: 80, shooting: 78, passing: 90, dribbling: 88, physical: 75 }
   },
   { 
-    id: 6, name: "Forvet 1", position: "Sol Forvet", role: 'FW', number: 7, isStarting: true, coordinates: { x: 35, y: 20 },
-    age: 22, from: "Antalya", stats: { speed: 92, shooting: 85, passing: 75, dribbling: 82, physical: 70 }
+    id: 6, name: "Kürşat Emre Külköylüoğlu", nickname: "Küşo", position: "Sol Forvet", role: 'FW', photo: "./Küşo.png", number: 7, isStarting: true, coordinates: { x: 35, y: 20 },
+    age: 20, from: "Denizli", stats: { speed: 60, shooting: 80, passing: 74, dribbling: 80, physical: 75 }
   },
   { 
     id: 7, name: "Forvet 2", position: "Sağ Forvet", role: 'FW', number: 9, isStarting: true, coordinates: { x: 65, y: 20 },
