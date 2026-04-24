@@ -22,7 +22,7 @@ function App() {
       <main className="main-content">
         <header className="app-header">
           <div className="logo-container">
-            <img src="./logo.svg" alt="SSD Logo" className="app-logo" />
+            <img src="./logo.jpg" alt="SSD Logo" className="app-logo" />
             <h1>SSD</h1>
           </div>
           <div className="formation-badge">1-2-2-2</div>
