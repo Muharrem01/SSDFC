@@ -40,8 +40,8 @@ export const players: Player[] = [
     photo: "./kural.png", age: 19, from: "Burdur", stats: { speed: 82, shooting: 88, passing: 96, dribbling: 90, physical: 85 }
   },
   { 
-    id: 5, name: "Orta Saha 2", position: "Sağ Orta Saha", role: 'MF', number: 10, isStarting: true, coordinates: { x: 70, y: 45 },
-    age: 27, from: "Adana", stats: { speed: 80, shooting: 78, passing: 90, dribbling: 88, physical: 75 }
+    id: 5, name: "Ertuğrul Enes Vural", nickname: "Eto", position: "Sağ Orta Saha", role: 'MF', photo: "./eto.png", number: 10, isStarting: true, coordinates: { x: 70, y: 45 },
+    age: 20, from: "Denizli", stats: { speed: 75, shooting: 84, passing: 80, dribbling: 84, physical: 82 }
   },
   { 
     id: 6, name: "Kürşat Emre Külköylüoğlu", nickname: "Küşo", position: "Sol Forvet", role: 'FW', photo: "./Küşo.png", number: 7, isStarting: true, coordinates: { x: 35, y: 20 },
