@@ -56,16 +56,16 @@
 
 .player-image-container {
   position: relative;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .on-pitch .player-image-container {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   border: 2px solid var(--primary-color);
   border-radius: 50%;
   padding: 2px;
@@ -87,7 +87,7 @@
   justify-content: center;
   font-weight: bold;
   color: var(--primary-color);
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .player-number {
@@ -96,10 +96,10 @@
   right: -5px;
   background: var(--primary-color);
   color: black;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: bold;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@
 
 .player-info {
   text-align: center;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .in-sidebar .player-info {
@@ -117,7 +117,7 @@
 }
 
 .player-name {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: white;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
