@@ -37,7 +37,7 @@ export const players: Player[] = [
   },
   { 
     id: 4, name: "Muharrem Kural", nickname: "Kural", position: "Sol Orta Saha", role: 'MF', number: 8, isStarting: true, coordinates: { x: 30, y: 45 },
-    photo: "./kural.jpg", age: 19, from: "Burdur", stats: { speed: 82, shooting: 88, passing: 96, dribbling: 90, physical: 85 }
+    photo: "./kural.png", age: 19, from: "Burdur", stats: { speed: 82, shooting: 88, passing: 96, dribbling: 90, physical: 85 }
   },
   { 
     id: 5, name: "Orta Saha 2", position: "Sağ Orta Saha", role: 'MF', number: 10, isStarting: true, coordinates: { x: 70, y: 45 },
