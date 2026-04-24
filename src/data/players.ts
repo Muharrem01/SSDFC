@@ -32,8 +32,8 @@ export const players: Player[] = [
     age: 20, from: "Denizli", stats: { speed: 58, shooting: 80, passing: 80, dribbling: 83, physical: 73 }
   },
   { 
-    id: 3, name: "Defans 2", position: "Sağ Bek", role: 'DF', number: 4, isStarting: true, coordinates: { x: 70, y: 70 },
-    age: 26, from: "İzmir", stats: { speed: 78, shooting: 50, passing: 72, dribbling: 65, physical: 88 }
+    id: 3, name: "Efe Ünsal", nickname: "Efe", position: "Sağ Bek", role: 'DF', photo: "./efe.png", number: 4, isStarting: true, coordinates: { x: 70, y: 70 },
+    age: 19, from: "Denizli", stats: { speed: 80, shooting: 82, passing: 84, dribbling: 78, physical: 78 }
   },
   { 
     id: 4, name: "Muharrem Kural", nickname: "Kural", position: "Sol Orta Saha", role: 'MF', number: 8, isStarting: true, coordinates: { x: 30, y: 45 },
