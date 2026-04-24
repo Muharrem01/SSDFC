@@ -18,15 +18,17 @@ const PlayerCard = ({ player, onPitch = false, onClick, isOverlay = false }: Pla
     id: player.id,
   });
 
-  const style = transform ? {
+  const style = (transform && !isDragging) ? {
     transform: `translate3d(${transform.x}px, ${transform.y}px, 0)`,
-    opacity: isDragging ? 0.4 : 1,
   } : undefined;
 
   const positionStyle = onPitch ? { 
     left: `${player.coordinates.x}%`, 
-    top: `${player.coordinates.y}%` 
-  } : {};
+    top: `${player.coordinates.y}%`,
+    opacity: isDragging ? 0.4 : 1,
+  } : {
+    opacity: isDragging ? 0.4 : 1,
+  };
 
   return (
     <div 
